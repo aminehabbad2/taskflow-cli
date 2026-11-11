@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taskflow-cli"
+version = "0.1.0"
+description = "A lightweight command-line task manager"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "aminehabbad2" }]
+license = { text = "MIT" }
+keywords = ["cli", "task-manager", "productivity"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS independent",
+]
+
+[project.scripts]
+taskflow = "taskflow_cli.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
